@@ -35,6 +35,7 @@ public class AppSquare {
             in.nextLine();
             answer = in.nextLine().charAt(0);
         }
+        in.close();
     }
 }
 

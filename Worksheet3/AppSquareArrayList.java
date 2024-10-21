@@ -1,5 +1,7 @@
 package Worksheet3;
 
+import java.util.ArrayList;
+
 /*
 Create an AppSquareArrayList that creates an ArrayList of Squares.
 a. Add 3 different squares
@@ -12,12 +14,23 @@ f. Do a for loop to iterate over the ArrayList and print the side of each Square
 */
 
 public class AppSquareArrayList {
-    Square[] squares = new Square[3];
-    squares[0] = new Square(2);
-    squares[1] = new Square(4);
-    squares[2] = new Square(8);
+    ArrayList<Square> squareList = new ArrayList<>();
+    squareList.add(new Square(2));
+    squareList.add(new Square(4));
+    squareList.add(new Square(8));
 
-    public static void main(){
+    for(int i = 0; i < squareList.size(); i++){
+        System.out.println("Side: " + squareList.get(i).getSide());
+        System.out.println("Area: " + squareList.get(i).calculateArea());
+    }
 
+    squareList.remove(0);
+
+    System.out.println(squareList.size());
+
+    squareList.set(1, 200);
+
+    for(int i = 0; i < squareList.size(); i++){
+        System.out.println("Side:" + squareList.get(i).getSide());
     }
 }

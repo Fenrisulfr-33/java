@@ -35,7 +35,7 @@ public class Square {
         return side * side;
     }
 
-    public String toString() {
+    public String toString() {        
         return "Side: " + side;
     }
 }
