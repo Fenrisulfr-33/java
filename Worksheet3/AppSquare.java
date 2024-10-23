@@ -1,6 +1,7 @@
 package Worksheet3;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /*
 a. Does it store any value?
@@ -36,6 +37,32 @@ public class AppSquare {
             answer = in.nextLine().charAt(0);
         }
         in.close();
+
+
+
+
+        ArrayList<Square> list1 = new ArrayList<>();
+        Square one = new Square(2);
+        Square two = new Square(4);
+        Square three = new Square(8);
+        
+        list1.add(one);
+        list1.add(two);
+        list1.add(three);
+    
+        for(Square temp : list1){
+            System.out.println(temp.getSide());
+            System.out.println(temp.calculateArea());
+        }
+        
+        list1.remove(0);
+        System.out.println(list1.size());
+        // Square four = new Square(200);
+        list1.set((list1.size()-1), new Square(200));
+    
+        for(Square temp2 : list1){
+            System.out.println(temp2.getSide());
+        }
     }
 }
 

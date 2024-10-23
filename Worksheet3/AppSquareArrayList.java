@@ -1,6 +1,7 @@
 package Worksheet3;
 
 import java.util.ArrayList;
+// import java.util.Arrays;
 
 /*
 Create an AppSquareArrayList that creates an ArrayList of Squares.
@@ -14,23 +15,29 @@ f. Do a for loop to iterate over the ArrayList and print the side of each Square
 */
 
 public class AppSquareArrayList {
-    ArrayList<Square> squareList = new ArrayList<>();
-    squareList.add(new Square(2));
-    squareList.add(new Square(4));
-    squareList.add(new Square(8));
-
-    for(int i = 0; i < squareList.size(); i++){
-        System.out.println("Side: " + squareList.get(i).getSide());
-        System.out.println("Area: " + squareList.get(i).calculateArea());
+    public static void main(String[] args) {
+        ArrayList<Square> list1 = new ArrayList<>();
+        Square one = new Square(2);
+        Square two = new Square(4);
+        Square three = new Square(8);
+        
+        list1.add(one);
+        list1.add(two);
+        list1.add(three);
+    
+        for(Square temp : list1){
+            System.out.println(temp.getSide());
+            System.out.println(temp.calculateArea());
+        }
+        
+        list1.remove(0);
+        System.out.println(list1.size());
+        // Square four = new Square(200);
+        list1.set((list1.size()-1), new Square(200));
+    
+        for(Square temp2 : list1){
+            System.out.println(temp2.getSide());
+        }
     }
 
-    squareList.remove(0);
-
-    System.out.println(squareList.size());
-
-    squareList.set(1, 200);
-
-    for(int i = 0; i < squareList.size(); i++){
-        System.out.println("Side:" + squareList.get(i).getSide());
-    }
 }
