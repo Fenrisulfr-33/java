@@ -1,4 +1,3 @@
-package Worksheet3;
 /*
 a. Does it store any value/instance variable?
     yes is stores the this.side value instance.
