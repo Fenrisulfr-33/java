@@ -48,5 +48,11 @@ public class Shape {
                 System.out.println(s);
             }
         }
+
+        Shape a = new Shape(0, "red");
+        Rectangle b = new Rectangle(2, 2, "yellow");
+        Triangle c = new Triangle(2, 2, "green");
+        Square d = new Square(2, "blue");
+        
     }
 }
