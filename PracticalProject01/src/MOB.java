@@ -20,38 +20,35 @@ public class MOB implements Attributes {
     public int getArmor() {
         return armor;
     }
-
     @Override
     public int getMaxHP() {
         return maxHp;
     }
-
     @Override
     public DiceType getDamageDie() {
         return damageDie;
     }
-
     @Override
     public int getHitModifier() {
         return hitModifier;
     }
-
-    public void addDamage(int damage){
-        this.damage += damage;
+    public int getDamage(){
+        return damage;
     }
-
-    public MOB copy(){
-        return new MOB(name, maxHp, armor, hitModifier, damageDie);
-    }
-
     public int getHP(){
         return maxHp - damage;
     }
     public String getName(){
         return name;
     }
+    public void addDamage(int damage){
+        this.damage += damage;
+    }
     public void resetDamage(){
         this.damage = 0;
+    }
+    public MOB copy(){
+        return new MOB(name, maxHp, armor, hitModifier, damageDie);
     }
     public String toString(){
         return "+============================+\n" +
@@ -63,6 +60,7 @@ public class MOB implements Attributes {
         "+============================+";
     }
     public static void main(String[] args) {
+        MOB mob = new MOB("MOB Guardian", 150, 90, 1, DiceType.D20);
         
     }
 }

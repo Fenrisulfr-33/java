@@ -2,7 +2,7 @@ package PracticalProject01.src;
 
 public class Fortune implements Attributes {
     private int armor;
-    private DiceType dtype;
+    private DiceType dType;
     private int hitModifier;
     private int hpBonus;
     private String name;
@@ -16,33 +16,28 @@ public class Fortune implements Attributes {
         this.hitModifier = hitModifier;
         this.hpBonus = hpBonus;
         this.name = name;
-        dtype = type;
+        dType = type;
     }
 
     @Override
     public int getArmor() {
         return armor;
     }
-
     @Override
     public int getMaxHP() {
         return hpBonus;
     }
-
     @Override
     public DiceType getDamageDie() {
-        return dtype;
+        return dType;
     }
-
     @Override
     public int getHitModifier() {
         return hitModifier;
     }
-
     public String getName() {
         return name;
     }
-
     public String toString() {
         return "+======================+\n" +
                 String.format("|%-22s|%n", getName()) +
