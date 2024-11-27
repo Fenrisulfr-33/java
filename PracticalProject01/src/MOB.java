@@ -7,7 +7,7 @@ public class MOB implements Attributes {
     protected int maxHp;
     private String name;
 
-    public MOB(String name, int hp, int armor, int hitModifier, DiceType damageDie){
+    public MOB(String name, int hp, int armor, int hitModifier, DiceType damageDie) {
         this.name = name;
         this.maxHp = hp;
         this.armor = armor;
@@ -20,47 +20,58 @@ public class MOB implements Attributes {
     public int getArmor() {
         return armor;
     }
+
     @Override
     public int getMaxHP() {
         return maxHp;
     }
+
     @Override
     public DiceType getDamageDie() {
         return damageDie;
     }
+
     @Override
     public int getHitModifier() {
         return hitModifier;
     }
-    public int getDamage(){
+
+    public int getDamage() {
         return damage;
     }
-    public int getHP(){
+
+    public int getHP() {
         return maxHp - damage;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public void addDamage(int damage){
+
+    public void addDamage(int damage) {
         this.damage += damage;
     }
-    public void resetDamage(){
+
+    public void resetDamage() {
         this.damage = 0;
     }
-    public MOB copy(){
+
+    public MOB copy() {
         return new MOB(name, maxHp, armor, hitModifier, damageDie);
     }
-    public String toString(){
+
+    public String toString() {
         return "+============================+\n" +
-        String.format("| %-27s|%n", getName()) +
-        "|                            |\n" +
-        String.format("|         Health: %-10d |%n", getHP())  +
-        String.format("|  Power: %-6s  Armor: %-4d|%n", getDamageDie().toString(), getArmor()) +
-        "|                            |\n" +
-        "+============================+";
+                String.format("| %-27s|%n", getName()) +
+                "|                            |\n" +
+                String.format("|         Health: %-10d |%n", getHP()) +
+                String.format("|  Power: %-6s  Armor: %-4d|%n", getDamageDie().toString(), getArmor()) +
+                "|                            |\n" +
+                "+============================+";
     }
+
     public static void main(String[] args) {
-        MOB mob = new MOB("MOB Guardian", 150, 90, 1, DiceType.D20);
-        
+        // MOB mob = new MOB("MOB Guardian", 150, 90, 1, DiceType.D20);
+
     }
 }
