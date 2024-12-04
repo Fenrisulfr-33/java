@@ -66,9 +66,7 @@ public abstract class GameData {
         }
         return returnMonsters;
     }
-    public abstract void save(String filename){
-        
-    }
+    public abstract void save(String filename);
 
     public static void main(String[] args) {
         // Test cases

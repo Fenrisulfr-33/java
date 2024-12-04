@@ -19,7 +19,7 @@ public class Main {
         // takes the substring of the argument (after the = sign) to set the gamedata. else,
         // any other argument sets the saveData value (even if it has been set)
         for (int i = 0; i < args.length; i++){
-            if (args[i].substring(0, 6) == "--data"){
+            if (args[i].contains("data")){
                 gameData = args[i].substring(args[i].indexOf("=" + 1));
             } else {
                 saveData = args[i];

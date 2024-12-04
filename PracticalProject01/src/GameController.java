@@ -22,13 +22,13 @@ public class GameController {
     }
 
     protected boolean processCommand(String command){
-        if (command == "bye" || command == "bye"){
+        if (command.contains("bye") || command.contains("exit")){
             return false;
         } else if (command.contains("ls") || command.contains("list all")){
             view.listKnights(data.getKnights());
-        } else if (command == "list active"){
+        } else if (command.contains("list active")){
             data.getActiveKnights();
-        } else if (command == "show"){
+        } else if (command.contains("show")){
             // take the remainder and show the knight
             if ( command.startsWith("show")){
                 processShowKnight(command.substring(command.indexOf("show") + 4).trim());
@@ -46,7 +46,7 @@ public class GameController {
             // save (filename - optional) - saves the game. 
             // If a file name is provided saves the knights to the file. 
             // If a file name is left off, saves out to saveData.csv
-            if (command.trim() == "save"){
+            if (command.startsWith("save")){
                 data.save("saveData.csv");
             } else {
                 data.save(command.substring(command.indexOf("save") + 4).trim());

@@ -9,22 +9,21 @@ public class ConsoleView implements GameView {
     public ConsoleView() {
         in = new Scanner(System.in);
     }
-
+    @Override
     public void splashScreen() {
-        // TODO: figure out what a splash screen is
         System.out.print("Splash Screen here....");
     }
-
+    @Override
     public void endGame() {
         System.out.println("Goodbye");
     }
-
+    @Override
     public String displayMainMenu() {
         System.out.println("What would you like to do?");
         String response = in.nextLine();
         return response;
     }
-
+    @Override
     public void printHelp() {
         System.out.print("Unsure what to do, here are some options:\r\n" +
                 "            ls or list all  - listing the knights\r\n" +
@@ -41,53 +40,49 @@ public class ConsoleView implements GameView {
                 " When you make a knight inactive, they will heal. How many monsters can you defeat \r\n" +
                 " before, you have to heal?  ");
     }
-
+    @Override
     public void listKnights(List<Knight> knights){
-        if (knights.size() == 0){
+        if (knights.isEmpty()){
             System.out.println("No knights to list");
         } else {
             for (Knight knight : knights){
-                System.out.println(knight.getId() + ": " + knight.getName())
+                System.out.println(knight.getId() + ": " + knight.getName());
             }
         }
     }
-
+    @Override
     public void knightNotFound(){
         System.out.println("Knight not found!");
     }
-
+    @Override
     public void showKnight(Knight knight){
         System.out.println(knight.toString() + "\n");
     }
-
+    @Override
     public void setActiveFailed(){
-        System.out.println("Unable to set active knight. Only four can be active at a time.\n")
+        System.out.println("Unable to set active knight. Only four can be active at a time.\n");
     }
 
-    public void printBattleText(List<MOB> monsters, List<Knight> activeKnights){
-        // Our heroes come across the following monsters. Prepare for battle!
-        // Knights                     Foes
-        // Guinevere                   Umber Hulk
-        // Danu of Ireland
-        // Arthur
-        // %-27s %n
+    @Override
+    public void printBattleText(List<MOB> monsters, List<Knight> activeKnights) {
         System.out.println("Our heroes come across the following monsters. Prepare for battle!");
-        System.out.printf("Knights %-27s  Foes %n");
-        if (activeKnights.size() == monsters.size()){
-            for (int i = 0; i < activeKnights.size(); i++){
-                String knight = activeKnights.get(i).getName();
-                String monster = monsters.get(i).getName();
-                System.out.println(knight + " " + monster);
-            }
+        String formattedString = String.format("%-27s %6s", "Knights", "Foes");
+        System.out.println(formattedString);
+        int i = 0;
+        for (; i < monsters.size(); i++) {
+            String formattedKnightsMOB = String.format("%-27s%6s", activeKnights.get(i), monsters.get(i));
+            System.out.println(formattedKnightsMOB);
         }
-        // TODO if the lenghts are not the same, make one for loop
-
+        for (; i < activeKnights.size(); i++) {
+            String formattedKnight = String.format("%-27s", activeKnights.get(i));
+            System.out.println(formattedKnight);
+        }
     }
-
+    @Override
     public void printBattleText(MOB dead){
         System.out.println(dead.getName() + " was defeated!");
     }
-
+    @Override
     public void printFortunes(List<Knight> activeKnights){
         System.out.println("For this quest, our knights drew the following fortunes!");
         for (Knight knight : activeKnights){
@@ -96,7 +91,7 @@ public class ConsoleView implements GameView {
             System.out.println(fortune.toString());
         }
     }
-
+    @Override
     public boolean checkContinue(){
         System.out.println("Would you like to continue on your quest (y/n)? ");
         String response = in.nextLine();
@@ -105,7 +100,7 @@ public class ConsoleView implements GameView {
         }
         return false;
     }
-
+    @Override
     public void printDefeated(){
         System.out.println("All active knights have been defeated!");
     }
