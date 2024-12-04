@@ -3,7 +3,7 @@ package PracticalProject01.src;
 import java.util.List;
 import java.util.Scanner;
 
-public class ConsoleView extends Object implements GameView {
+public class ConsoleView implements GameView {
     private final Scanner in;
 
     public ConsoleView() {
@@ -72,7 +72,7 @@ public class ConsoleView extends Object implements GameView {
         // Arthur
         // %-27s %n
         System.out.println("Our heroes come across the following monsters. Prepare for battle!");
-        // System.out.printf("Knights Foes", %-27s %n);
+        System.out.printf("Knights %-27s  Foes %n");
         if (activeKnights.size() == monsters.size()){
             for (int i = 0; i < activeKnights.size(); i++){
                 String knight = activeKnights.get(i).getName();
