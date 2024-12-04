@@ -1,5 +1,4 @@
 package Lab_11.src;
-import java.io.*;
 import java.util.*;
 
 
@@ -27,10 +26,32 @@ public class Flights {
         Collections.sort(p, new Comparator<Plane>() {
             @Override
             public int compare(Plane a, Plane b) {
-                
+            // 1. If a > b, return 1
+            // 2. If a < b, return -1
+            // 3. If a == b, return 0
                 //Students write this
                 //compare airline first, then city, then time
-            }
+                int airlineComparison = a.airline.compareToIgnoreCase(b.airline);
+                if (airlineComparison != 0) {
+                    return airlineComparison;
+                }
+
+                int cityComparison = a.city.compareToIgnoreCase(b.city);
+                if (cityComparison != 0) {
+                    return cityComparison;
+                }
+
+                // Compare time manually
+                if (a.time > b.time) {
+                    return 1;
+                } else if (a.time < b.time) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+                
+                
+                }
         });
         return p;
     }
