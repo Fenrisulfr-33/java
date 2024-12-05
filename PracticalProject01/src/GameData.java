@@ -1,16 +1,16 @@
-package PracticalProject01.src;
+// package PracticalProject01.src;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public abstract class GameData {
-    protected final List<Knight> activeKnights;
-    protected final List<Fortune> fortunes;
-    protected final List<Knight> knights;
+    protected final List<Knight> activeKnights = new ArrayList<>();
+    protected final List<Fortune> fortunes = new ArrayList<>();
+    protected final List<Knight> knights = new ArrayList<>();
     private static final int MAX_ACTIVE = 4;
-    protected final List<MOB> monsters;
-    private static final Random random;
+    protected final List<MOB> monsters = new ArrayList<>();
+    private static final Random random = new Random();
 
     // No constructor
 
@@ -36,7 +36,7 @@ public abstract class GameData {
         return null;
     }
     public boolean setActive(Knight kt){
-        if (activeKnights.size() < 4){
+        if (activeKnights.size() < MAX_ACTIVE){
             activeKnights.add(kt);
             return true;
         }
@@ -69,9 +69,5 @@ public abstract class GameData {
     public abstract void save(String filename);
 
     public static void main(String[] args) {
-        // Test cases
-        // Import the list and test
-        String file = "PracticalProject01\\gamedata.csv";
-
     }
 }

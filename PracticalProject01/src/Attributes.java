@@ -1,4 +1,4 @@
-package PracticalProject01.src;
+// package PracticalProject01.src;
 public interface Attributes {
     int getArmor();
     int getMaxHP();

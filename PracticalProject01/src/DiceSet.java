@@ -1,4 +1,4 @@
-package PracticalProject01.src;
+// package PracticalProject01.src;
 import java.util.Random;
 
 public class DiceSet {

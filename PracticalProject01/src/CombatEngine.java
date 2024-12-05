@@ -1,12 +1,12 @@
-package PracticalProject01.src;
+// package PracticalProject01.src;
 
 import java.util.List;
 import java.util.Random;
 
 public class CombatEngine {
     private final GameData data;
-    private final DiceSet dice;
-    private final Random rnd;
+    private final DiceSet dice = new DiceSet();
+    private final Random rnd = new Random();
     private final GameView view;
 
     public CombatEngine(GameData data, GameView view){
@@ -27,7 +27,7 @@ public class CombatEngine {
     }
 
     private int doBattle(List<MOB> attackers, List<MOB> defenders){
-
+        return 0;
     }
 
     public void clear(){

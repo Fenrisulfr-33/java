@@ -1,4 +1,4 @@
-package PracticalProject01.src;
+// package PracticalProject01.src;
 
 public class GameController {
     private final GameData data;

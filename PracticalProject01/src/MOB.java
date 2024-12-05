@@ -1,4 +1,4 @@
-package PracticalProject01.src;
+// package PracticalProject01.src;
 public class MOB implements Attributes {
     protected int armor;
     protected int damage;

@@ -1,4 +1,4 @@
-package PracticalProject01.src;
+// package PracticalProject01.src;
 public class Fortune implements Attributes {
     private int armor;
     private DiceType dType;

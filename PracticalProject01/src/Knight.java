@@ -1,4 +1,4 @@
-package PracticalProject01.src;
+// package PracticalProject01.src;
 public class Knight extends MOB {
     private Fortune activeFortune;
     protected final int id;
