@@ -1,4 +1,3 @@
-package PracticalProject01.src;
 public class Fortune implements Attributes {
     private int armor;
     private DiceType dType;
@@ -53,14 +52,6 @@ public class Fortune implements Attributes {
     }
 
     public static void main(String[] args) {
-        // Fortune ftn = new Fortune("Merlin Luck", 10, 5, 2, DiceType.D12);
-        // System.out.println("TESTING Armor in fortune " + ftn.getArmor()); //
-        // System.out.println("TESTING MaxHP in fortune " + ftn.getMaxHP()); //
-        // System.out.println("TESTING DamageDie in fortune " + ftn.getDamageDie()); //
-        // System.out.println("TESTING HitModifier in fortune " + ftn.getHitModifier());
-        // //
-        // System.out.println("TESTING Name in fortune " + ftn.getName()); //
-        // System.out.println("TESTING toString in fortune \n" + ftn); //
     }
 
 }

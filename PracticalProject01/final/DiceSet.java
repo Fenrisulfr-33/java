@@ -1,4 +1,3 @@
-package PracticalProject01.src;
 import java.util.Random;
 
 public class DiceSet {
@@ -30,13 +29,6 @@ public class DiceSet {
     }
 
     public static void main(String[] args) {
-        // DiceSet set = new DiceSet();
-        // System.out.println("TESTING DiceSet (D4): " + set.roll(DiceType.D4));
-        // System.out.println("TESTING DiceSet (D6): " + set.roll(DiceType.D6));
-        // System.out.println("TESTING DiceSet (D8): " + set.roll(DiceType.D8));
-        // System.out.println("TESTING DiceSet (D10): " + set.roll(DiceType.D10));
-        // System.out.println("TESTING DiceSet (D12): " + set.roll(DiceType.D12));
-        // System.out.println("TESTING DiceSet (D20): " + set.roll(DiceType.D20));
     }
 
     

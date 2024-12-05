@@ -1,5 +1,3 @@
-package PracticalProject01.src;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,7 +9,7 @@ public class ConsoleView implements GameView {
     }
     @Override
     public void splashScreen() {
-        System.out.println("Splash Screen here....");
+        System.out.print("Splash Screen here....");
     }
     @Override
     public void endGame() {
@@ -19,26 +17,26 @@ public class ConsoleView implements GameView {
     }
     @Override
     public String displayMainMenu() {
-        System.out.print("What would you like to do? ");
+        System.out.println("What would you like to do?");
         String response = in.nextLine();
         return response;
     }
     @Override
     public void printHelp() {
-        System.out.print("Unsure what to do, here are some options:\n" +
-                "\tls or list all  - listing the knights\n" +
-                "\tlist active  - list the active knights knights only\n" +
-                "\tshow name or id - show the knight details card\n" +
-                "\tset active name or id - set knight as active (note: only 4 knights can be active) \n" +
-                "\tremove active name or id - remove a knight from active status (heals knight)\n" +
-                "\texplore or adventure or quest - find random monsters to fight\n" +
-                "\tsave filename - save the game to the file name (default: saveData.csv)\n" +
-                "\texit or goodbye - to leave the game\n" +
-                "\n" +
-                "Game rules: You can have four active knights. As long as they are active, they won't heal, \n" +
-                "but they can gain XP by going on adventures.\n" +
-                "When you make a knight inactive, they will heal. How many monsters can you defeat \n" +
-                "before, you have to heal? \n");
+        System.out.print("Unsure what to do, here are some options:\r\n" +
+                "            ls or list all  - listing the knights\r\n" +
+                "            list active  - list the active knights knights only\r\n" +
+                "            show name or id - show the knight details card\r\n" +
+                "            set active name or id - set knight as active (note: only 4 knights can be active) \r\n" +
+                "            remove active name or id - remove a knight from active status (heals knight)\r\n" +
+                "            explore or adventure or quest - find random monsters to fight\r\n" +
+                "            save filename - save the game to the file name (default: saveData.csv)\r\n" +
+                "            exit or goodbye - to leave the game\r\n" +
+                "\r\n" +
+                " Game rules: You can have four active knights. As long as they are active, they won't heal, \r\n" +
+                " but they can gain XP by going on adventures.\r\n" +
+                " When you make a knight inactive, they will heal. How many monsters can you defeat \r\n" +
+                " before, you have to heal?  ");
     }
     @Override
     public void listKnights(List<Knight> knights){

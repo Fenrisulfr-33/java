@@ -1,4 +1,3 @@
-package PracticalProject01.src;
 public class MOB implements Attributes {
     protected int armor;
     protected int damage;
@@ -71,7 +70,5 @@ public class MOB implements Attributes {
     }
 
     public static void main(String[] args) {
-        // MOB mob = new MOB("MOB Guardian", 150, 90, 1, DiceType.D20);
-
     }
 }

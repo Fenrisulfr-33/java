@@ -1,5 +1,3 @@
-package PracticalProject01.src;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

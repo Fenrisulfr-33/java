@@ -1,5 +1,3 @@
-package PracticalProject01.src;
-
 import java.util.List;
 
 public interface GameView {

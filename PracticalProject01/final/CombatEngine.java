@@ -1,5 +1,3 @@
-package PracticalProject01.src;
-
 import java.util.List;
 import java.util.Random;
 
