@@ -25,7 +25,7 @@ public class GameController {
         } else if (command.contains("ls") || command.contains("list all")){
             view.listKnights(data.getKnights());
         } else if (command.contains("list active")){
-            data.getActiveKnights();
+            view.listKnights(data.getActiveKnights());
         } else if (command.contains("show")){
             // take the remainder and show the knight
             if ( command.startsWith("show")){
@@ -54,6 +54,8 @@ public class GameController {
             engine.initialize();
             engine.runCombat();
             engine.clear();
+        } else {
+            view.printHelp();
         }
         return true;
     }

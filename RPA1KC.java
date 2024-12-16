@@ -1,4 +1,5 @@
 public class RPA1KC {
+
     private double myValue = 0;
 
     public void setValue(double myValue) {
@@ -26,4 +27,11 @@ public class RPA1KC {
     variable	value
     myValue	5.0
      */
+    public static void main(String[] args) {
+        String name;
+        name = "James Gosling";
+
+        System.out.print("Name: " + name);
+    }
+
 }

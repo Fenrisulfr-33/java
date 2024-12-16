@@ -19,7 +19,6 @@ public abstract class GameData {
         return activeKnights;
     }
     public Knight getActive(String nameOrId){
-        // use findKnight
         return findKnight(nameOrId, activeKnights);
     }
     public Knight getKnight(String nameOrId){
@@ -27,7 +26,7 @@ public abstract class GameData {
     }
     protected Knight findKnight(String nameOrId, List<Knight> list){
         for (Knight knight : list){
-            if (knight.getName().toLowerCase().contains(nameOrId) || Integer.toString(knight.getId()).equals(nameOrId)){
+            if (knight.getName().toLowerCase().contains(nameOrId.toLowerCase()) || String.valueOf(knight.getId()).equals(nameOrId)){
                 return knight;
             }
         }

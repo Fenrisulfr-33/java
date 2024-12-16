@@ -35,10 +35,10 @@ public class ConsoleView implements GameView {
                 "\tsave filename - save the game to the file name (default: saveData.csv)\n" +
                 "\texit or goodbye - to leave the game\n" +
                 "\n" +
-                "Game rules: You can have four active knights. As long as they are active, they won't heal, \n" +
+                "Game rules: You can have four active knights. As long as they are active, they won't heal,\n" +
                 "but they can gain XP by going on adventures.\n" +
-                "When you make a knight inactive, they will heal. How many monsters can you defeat \n" +
-                "before, you have to heal? \n");
+                "When you make a knight inactive, they will heal. How many monsters can you defeat\n" +
+                "before, you have to heal?\n");
     }
     @Override
     public void listKnights(List<Knight> knights){
